@@ -17,9 +17,17 @@ function App() {
         <h1>Liasta Attori</h1>
       </div>
       <hr />
-      <ul>
-        {actor.map((element) => <li key={element.id}>{element.name}</li>)}
-      </ul>
+      {actor.map((element) => <div key={element.id}>
+        <h4>{element.name}</h4>
+        <img src={element.image} alt={element.name} />
+        <ul>
+          <li>Birth year: {element.birth_year}</li>
+          <li>Nationality: {element.nationality}</li>
+          <li>Known for: {element.known_for} </li>
+          <li>Awards: {element.awards}</li>
+          <li>Biography: {element.biography}</li>
+        </ul>
+      </div>)}
     </>
   )
 
